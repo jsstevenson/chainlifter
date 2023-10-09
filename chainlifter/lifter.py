@@ -9,8 +9,8 @@ class Strand(str, Enum):
     NEGATIVE = "-"
 
 
-class Chainfile:
-    """Chainfile-based Liftover provider for a single sequence to sequence
+class ChainLifter:
+    """Chainfile-based liftover provider for a single sequence to sequence
     association.
     """
 
@@ -31,9 +31,9 @@ class Chainfile:
 
         .. code-block:: python
 
-           from liftie.main import Liftie, Strand
+           from chainlifter.lifter import ChainLifter, Strand
 
-           lifter = Liftie("19", "38")
+           lifter = ChainLifter("19", "38")
            lifter.convert_coordinate("chr7", 140453136, Strand.POSITIVE)
            # returns [['chr7', '140753336', '+']]
 

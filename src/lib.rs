@@ -16,7 +16,7 @@ use std::path::Path;
 fn get_chainfile(from_db: &str, to_db: &str) -> String {
     if let Some(base_dirs) = BaseDirs::new() {
         let data_dir = base_dirs.home_dir();
-        let base_chainfile_dir = format!("{}/.local/share/liftie", data_dir.display());
+        let base_chainfile_dir = format!("{}/.local/share/chainlifter", data_dir.display());
         fs::create_dir_all(base_chainfile_dir.clone()).unwrap();
         let path = format!(
             "{}/hg{}ToHg{}.over.chain",
